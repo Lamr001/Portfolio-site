@@ -1,0 +1,161 @@
+doctype html
+html(lang="en")
+  head
+    title Portfolio Lamr
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(rel="shortcut icon" href="img/icon-site.ico" type="image/x-icon")
+    //- link(rel='stylesheet', href='style/animate.css')
+    link(rel='stylesheet', href='style/main.css')
+    //- script(src='js/WOW-20848c410fe32d161c2330e1d261b59512094f81/dist/wow.js')
+    script.
+      //- new WOW().init();
+
+  body(data-spy="scroll" data-target="#navbar-scroll")
+    header
+
+      nav#navbar-scroll.navbar.navbar-dark.navbar-expand-md.fixed-top.text-white
+        .container
+          a.navbar-brand.text-white.m-2.m-md-0(href='#') Lamr
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#nav-toggler', aria-controls='nav-toggler', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #nav-toggler.collapse.navbar-collapse
+            ul.navbar-nav.nav-pills.nav-fill.ml-auto
+              li.nav-item
+                a.nav-link.text-white.ml-1.pr-4.pl-4(href='#portfolio') Portfolio
+              li.nav-item
+                a.nav-link.text-white.ml-1.pr-4.pl-4(href='#about') About
+              li.nav-item
+                a.nav-link.text-white.ml-1.pr-4.pl-4(href='#contact') Contact
+
+
+      section.intro.text-center.container-fluid.d-table.h-100
+        .d-table-cell.align-middle
+          .container
+            span.intro-logo.text-white LAMR
+
+
+    section#portfolio.container-fluid.mt-5
+      .container
+        .text-center
+          h2 Portfolio
+          p Just my work
+        .row.d-flex.justify-content-around
+          .card.col-md-4.text-center.p-0
+            img.card-img-top(src='img/famous-people.png', alt='famous-people')
+            .card-body
+              .card-title
+                h3
+                  a.btn.btn-link(href='#', data-toggle='modal', data-target='#famousPeople') Famous People
+          #famousPeople.modal.fade(aria-hidden='true')
+            .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+              .modal-content
+                .modal-header
+                  h5.modal-title Famous People
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                  #carouselFamousPeople.carousel.slide(data-ride='carousel')
+                    .carousel-inner
+                      .carousel-item.active(data-interval='100')
+                        img.d-block.w-100(src='img/Screenshot_8.png', alt='...')
+                      .carousel-item(data-interval='100')
+                        img.d-block.w-100(src='img/Screenshot_2.png', alt='...')
+                      .carousel-item(data-interval='100')
+                        img.d-block.w-100(src='img/Screenshot_3.png', alt='...')
+                      .carousel-item(data-interval='100')
+                        img.d-block.w-100(src='img/Screenshot_4.png', alt='...')
+                    a.carousel-control-prev(href='#carouselFamousPeople', role='button', data-slide='prev')
+                      span.carousel-control-prev-icon(aria-hidden='true')
+                      span.sr-only Previous
+                    a.carousel-control-next(href='#carouselFamousPeople', role='button', data-slide='next')
+                      span.carousel-control-next-icon(aria-hidden='true')
+                      span.sr-only Next
+                  p.pt-4
+                    | Pellentesque sit amet ligula quam. Donec dictum magna id diam porta auctor. Morbi egestas purus eu ante pretium, aliquet faucibus est fringilla. In convallis maximus lorem id consectetur. Nulla nec interdum lorem, quis aliquam neque. Curabitur ultricies consequat aliquet. Cras sollicitudin vehicula nibh, in aliquet risus molestie non.
+                  a.btn.btn-info.text-white.w-100 Go to site
+          .card.col-md-4.text-center.p-0
+            img.card-img-top(src='img/portfolio0.jpg', alt='PortfolioV0')
+            .card-body
+              .card-title
+                h3
+                  a.btn.btn-link(href='#', data-toggle='modal', data-target='#portfolioV0') Portfolio v0
+          #portfolioV0.modal.fade(aria-hidden='true')
+            .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+              .modal-content
+                .modal-header
+                  h5.modal-title Portfolio v0
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                  #carouselPortfolioV0.carousel.slide(data-ride='carousel')
+                    .carousel-inner
+                      .carousel-item.active(data-interval='100')
+                        img.d-block.w-100(src='img/Screenshot_1.png', alt='...')
+                      .carousel-item(data-interval='100')
+                        img.d-block.w-100(src='img/Screenshot_6.png', alt='...')
+                      .carousel-item(data-interval='100')
+                        img.d-block.w-100(src='img/Screenshot_7.png', alt='...')
+                    a.carousel-control-prev(href='#carouselPortfolioV0', role='button', data-slide='prev')
+                      span.carousel-control-prev-icon(aria-hidden='true')
+                      span.sr-only Previous
+                    a.carousel-control-next(href='#carouselPortfolioV0', role='button', data-slide='next')
+                      span.carousel-control-next-icon(aria-hidden='true')
+                      span.sr-only Next
+                  p.pt-4
+                    | Curabitur ornare sapien est, eget condimentum nisl maximus eu. Integer sed sapien sed erat efficitur luctus. Proin venenatis velit a nisl porttitor varius. In vestibulum ut mauris vel porttitor. Morbi ac augue at nunc commodo imperdiet consequat at nunc. Vivamus egestas dignissim tellus ut facilisis. Sed sapien erat, lacinia in porta id, hendrerit quis ipsum. Maecenas ipsum nisl, pulvinar quis vulputate vitae, bibendum non tellus. Ut posuere eget velit laoreet eleifend. Pellentesque ullamcorper vulputate hendrerit.
+                  a.btn.btn-info.text-white.w-100 Go to site
+
+    section.bg-2.h-100
+      .container-fluid.d-table.text-white.h-100
+        .align-middle.d-table-cell.w-100
+          h2.pt-5.mb-5.text-center Progress skill
+          .container
+            .box-progressSkill
+              h3 HTML
+              .progress
+                .progress-bar.w-75(role='progressbar', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100') 75%
+            .box-progressSkill
+              h3 CSS
+              .progress
+                .progress-bar.w-75.bg-danger(role='progressbar', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100') 75%
+            .box-progressSkill
+              h3 JS
+              .progress
+                .progress-bar.w-25.bg-warning(role='progressbar', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100') 25%
+
+    section#about.text-center.container-fluid.d-table.h-100
+      .d-table-cell.align-middle
+        .container
+          img.avatar.mt-3(src='img/avatar.jpeg', alt='')
+          h2 About me
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin rutrum libero et dapibus. Duis rutrum, elit non egestas placerat, lectus libero posuere lectus, nec consequat sem massa eget dolor. Nulla maximus tristique nibh ut volutpat. Proin dapibus sapien lorem, eu iaculis est porttitor vitae. Cras ornare consectetur sollicitudin.
+
+    section#contact.text-center.text-white.container-fluid.d-table.h-100
+      .d-table-cell.align-middle
+        .container
+          h2.pt-3.pt-md-0 Contact with me
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          ul.list-inline.d-flex.flex-column.flex-md-row.justify-content-around
+            li
+              a#vk.btn.btn-outline-primary.btn-lg.text-white.mb-3.w-100(href='https://vk.com/id157921634') VK
+            li
+              a#github.btn.btn-outline-primary.btn-lg.text-white.mb-3.w-100(href='https://github.com/Lamr001') GitHub
+            li
+              button#gmail.btn.btn-outline-primary.btn-lg.text-white.mb-3.w-100(href='', data-toggle='tooltip', data-placement='bottom', title='denkamanet@gmail.com') Gmail
+            li
+              button#mail.btn.btn-outline-primary.btn-lg.text-white.mb-3.w-100(href='', data-toggle='tooltip', data-placement='bottom', title='denkamanet@mail.ru') Mail
+
+    footer.container-fluid.bg-dark.d-table
+      .container.d-table-cell.align-middle.text-center.text-white
+        span#footerIntro LAMR
+
+
+
+
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
+    script(src='js/main.js')
