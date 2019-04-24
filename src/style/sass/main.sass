@@ -1,41 +1,51 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous')
 @import url('https://fonts.googleapis.com/css?family=Faster+One')
+// TEST
+@import url('https://fonts.googleapis.com/css?family=Kanit')
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker')
+
+$logoText: 'Permanent Marker', cursive
 
 html, body
   width: 100%
   height: 100%
-  font-size: 20px
+  font-size: 22px
   scroll-behavior: smooth
 
-h1, h2, h3, h4, h5
+h1, h2, h3, h4, h5,
+.navbar li > a
   font-family: 'Righteous', cursive !important
+
+
+.navbar .navbar-brand,
+.intro-logo,
+#footerIntro
+  font-family: $logoText
+
 
 header
   height: inherit
 
-.navbar, li > a
+.navbar, .navbar li > a
   transition: all 0.4s ease
-
-.navbar .navbar-brand
-  font-family: 'Righteous', cursive
 
 li > a
   &:hover, &:focus
     background: rgba(255, 255, 255, 0.3) !important
     transition: all 0.4s ease
 
-.active // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.active 
   background: rgba(255, 255, 255, 0.3) !important
   transition: all 0.4s ease
 
 .intro
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/intro-img.jpg") no-repeat fixed (center / cover)
 
+
 .intro-logo
-  font-family: 'Faster One', cursive
   font-size: 15vw
 
-#portfolio, #about, #contact
+#portfolio, #about, #contact, #technology
   min-height: 100%
   > div
     min-height: 100%
@@ -49,13 +59,8 @@ li > a
 .carousel, .card
   box-shadow: 0 10px 25px !important
 
-.bg-2 > div
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Halo HD.jpg") no-repeat fixed (center / cover)
-
-.box-progressSkill
-  margin-bottom: 10vh
-  *
-    display: block !important
+#technology
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-2.jpg") no-repeat fixed (center / cover)
 
 #about p, .modal p
   text-align: justify
@@ -68,6 +73,7 @@ li > a
   display: block
   max-width: 40%
   height: auto
+  filter: grayscale(.50)
 
 #contact
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-3.jpg") no-repeat fixed (center / cover)
@@ -78,9 +84,9 @@ li > a
     background-color: #5181B8 !important
 
 #github
-  border: 3px solid #24292E !important
+  border: 3px solid #16191d !important
   &:hover, &:focus
-    background-color: #24292E !important
+    background-color: #16191d !important
 
 #gmail
   border: 3px solid #DE5347 !important
@@ -98,10 +104,15 @@ li > a
 footer
   min-height: 25%
 
-#footerIntro
-  font-family: 'Faster One', cursive
-  font-size: 9vw
+/*#footerIntro
+  font-size: 9vw*/
 
 @media (min-width: 790px)
+
   .avatar
     max-width: 25%
+
+
+@media (max-width: 790px)
+  #technology
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-2.jpg") no-repeat fixed (center / cover)

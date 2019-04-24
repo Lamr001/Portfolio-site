@@ -1,22 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous");
 @import url("https://fonts.googleapis.com/css?family=Faster+One");
+@import url("https://fonts.googleapis.com/css?family=Kanit");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
 html, body {
   width: 100%;
   height: 100%;
-  font-size: 20px;
+  font-size: 22px;
   scroll-behavior: smooth; }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5,
+.navbar li > a {
   font-family: 'Righteous', cursive !important; }
+
+.navbar .navbar-brand,
+.intro-logo,
+#footerIntro {
+  font-family: "Permanent Marker", cursive; }
 
 header {
   height: inherit; }
 
-.navbar, li > a {
+.navbar, .navbar li > a {
   transition: all 0.4s ease; }
-
-.navbar .navbar-brand {
-  font-family: 'Righteous', cursive; }
 
 li > a:hover, li > a:focus {
   background: rgba(255, 255, 255, 0.3) !important;
@@ -30,12 +35,11 @@ li > a:hover, li > a:focus {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/intro-img.jpg") no-repeat fixed center/cover; }
 
 .intro-logo {
-  font-family: 'Faster One', cursive;
   font-size: 15vw; }
 
-#portfolio, #about, #contact {
+#portfolio, #about, #contact, #technology {
   min-height: 100%; }
-  #portfolio > div, #about > div, #contact > div {
+  #portfolio > div, #about > div, #contact > div, #technology > div {
     min-height: 100%; }
 
 .card {
@@ -47,13 +51,8 @@ li > a:hover, li > a:focus {
 .carousel, .card {
   box-shadow: 0 10px 25px !important; }
 
-.bg-2 > div {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Halo HD.jpg") no-repeat fixed center/cover; }
-
-.box-progressSkill {
-  margin-bottom: 10vh; }
-  .box-progressSkill * {
-    display: block !important; }
+#technology {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-2.jpg") no-repeat fixed center/cover; }
 
 #about p, .modal p {
   text-align: justify; }
@@ -65,7 +64,9 @@ li > a:hover, li > a:focus {
   margin: auto;
   display: block;
   max-width: 40%;
-  height: auto; }
+  height: auto;
+  -webkit-filter: grayscale(0.5);
+          filter: grayscale(0.5); }
 
 #contact {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-3.jpg") no-repeat fixed center/cover; }
@@ -76,9 +77,9 @@ li > a:hover, li > a:focus {
     background-color: #5181B8 !important; }
 
 #github {
-  border: 3px solid #24292E !important; }
+  border: 3px solid #16191d !important; }
   #github:hover, #github:focus {
-    background-color: #24292E !important; }
+    background-color: #16191d !important; }
 
 #gmail {
   border: 3px solid #DE5347 !important; }
@@ -96,10 +97,12 @@ li > a:hover, li > a:focus {
 footer {
   min-height: 25%; }
 
-#footerIntro {
-  font-family: 'Faster One', cursive;
-  font-size: 9vw; }
-
+/*#footerIntro
+  font-size: 9vw*/
 @media (min-width: 790px) {
   .avatar {
     max-width: 25%; } }
+
+@media (max-width: 790px) {
+  #technology {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-2.jpg") no-repeat fixed center/cover; } }

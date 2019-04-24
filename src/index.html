@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/icon-site.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/animate.css">
     <link rel="stylesheet" href="style/main.css">
+    <script src="./js/WOW-master/dist/wow.js"></script>
     <script>
-      //- new WOW().init();
+      new WOW().init();
       
     </script>
   </head>
@@ -28,17 +30,17 @@
       </nav>
       <section class="intro text-center container-fluid d-table h-100">
         <div class="d-table-cell align-middle">
-          <div class="container"><span class="intro-logo text-white">LAMR</span></div>
+          <div class="container"><span class="intro-logo d-inline-block text-white wow bounceIn">LAMR</span></div>
         </div>
       </section>
     </header>
-    <section class="container-fluid mt-5" id="portfolio">
+    <section class="container-fluid mt-5 wow fadeIn" id="portfolio">
       <div class="container">
         <div class="text-center">
           <h2>Portfolio</h2>
           <p>Just my work</p>
         </div>
-        <div class="row d-flex justify-content-around">
+        <div class="row d-flex justify-content-around wow fadeIn">
           <div class="card col-md-4 text-center p-0"><img class="card-img-top" src="img/famous-people.png" alt="famous-people">
             <div class="card-body">
               <div class="card-title">
@@ -97,46 +99,69 @@
         </div>
       </div>
     </section>
-    <section class="bg-2 h-100">
-      <div class="container-fluid d-table text-white h-100">
-        <div class="align-middle d-table-cell w-100">
-          <h2 class="pt-5 mb-5 text-center">Progress skill</h2>
-          <div class="container">
-            <div class="box-progressSkill">
-              <h3>HTML</h3>
-              <div class="progress">
-                <div class="progress-bar w-75" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">75%</div>
-              </div>
-            </div>
-            <div class="box-progressSkill">
-              <h3>CSS</h3>
-              <div class="progress">
-                <div class="progress-bar w-75 bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">75%</div>
-              </div>
-            </div>
-            <div class="box-progressSkill">
-              <h3>JS</h3>
-              <div class="progress">
-                <div class="progress-bar w-25 bg-warning" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">25%</div>
-              </div>
-            </div>
+    <section class="container-fluid wow fadeIn" id="technology">
+      <h2 class="pt-5 mb-5 text-white text-center">Used technologies in projects</h2>
+      <div class="row d-flex justify-content-around h-100">
+        <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/gulp.png" alt="gulp">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Gulp</h5>
+            <p class="card-text">Automate and enhance your workflow. I use plugins like <b>browser-sync</b>, <b>autoprefixer</b>, <b>gulp-sass</b>, <b>gulp-pug</b>, <b>gulp-postcss</b>, <b>gulp-htmlmin</b>, <b>gulp-uglify</b>, <b>gulp-csso</b>, <b>gulp-clean</b>, <b>gulp-imagemin</b>.</p><a class="btn btn-dark w-100" href="https://gulpjs.com/">Developers site</a>
+          </div>
+        </div>
+        <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/bootstrap.jpg" alt="bootstrap">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Bootstrap</h5>
+            <p class="card-text">Build responsive, mobile-first projects on the web with the world’s most popular front-end component library. Bootstrap is an open source toolkit for developing with HTML, CSS, and JS.</p><a class="btn btn-dark w-100" href="https://getbootstrap.com/">Developers site</a>
+          </div>
+        </div>
+        <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/pug.jpg" alt="pug">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Pug</h5>
+            <p class="card-text">HTML preprocessor and template engine.</p><a class="btn btn-dark w-100" href="https://pugjs.org/api/getting-started.html">Developers site</a>
+          </div>
+        </div>
+        <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/sass.jpg" alt="sass">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Sass</h5>
+            <p class="card-text">Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p><a class="btn btn-dark w-100" href="https://sass-lang.com/">Developers site</a>
+          </div>
+        </div>
+        <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/git(hub).jpg" alt="git and github">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Git with Github</h5>
+            <p class="card-text">Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p><a class="btn btn-dark w-100" href="https://git-scm.com/">Developers site</a>
+          </div>
+        </div>
+        <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/jquery.png" alt="jQuery">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">jQuery</h5>
+            <p class="card-text">jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</p><a class="btn btn-dark w-100" href="https://jquery.com/">Developers site</a>
+          </div>
+        </div>
+        <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/npm.jpg" alt="gulp">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">NPM</h5>
+            <p class="card-text">Essential JavaScript development tools that help you go to market faster and build powerful applications using modern open source code.</p><a class="btn btn-dark w-100" href="https://www.npmjs.com/">Developers site</a>
           </div>
         </div>
       </div>
     </section>
     <section class="text-center container-fluid d-table h-100" id="about">
       <div class="d-table-cell align-middle">
-        <div class="container"><img class="avatar mt-3" src="img/avatar.jpeg" alt="">
-          <h2>About me</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin rutrum libero et dapibus. Duis rutrum, elit non egestas placerat, lectus libero posuere lectus, nec consequat sem massa eget dolor. Nulla maximus tristique nibh ut volutpat. Proin dapibus sapien lorem, eu iaculis est porttitor vitae. Cras ornare consectetur sollicitudin.</p>
+        <div class="container"><img class="avatar mt-3 wow zoomIn" src="img/avatar.jpg" alt="myAvatar">
+          <h2 class="wow fadeIn">About me</h2>
+          <p class="wow fadeIn">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin rutrum libero et dapibus. Duis rutrum, elit non egestas placerat, lectus libero posuere lectus, nec consequat sem massa eget dolor. Nulla maximus tristique nibh ut volutpat. Proin dapibus sapien lorem, eu iaculis est porttitor vitae. Cras ornare consectetur sollicitudin.
+            
+          </p>
         </div>
       </div>
     </section>
-    <section class="text-center text-white container-fluid d-table h-100" id="contact">
+    <section class="text-center text-white container-fluid d-table h-100 wow fadeIn" id="contact">
       <div class="d-table-cell align-middle">
         <div class="container">
           <h2 class="pt-3 pt-md-0">Contact with me</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>You can contact me in the following ways:</p>
           <ul class="list-inline d-flex flex-column flex-md-row justify-content-around">
             <li><a class="btn btn-outline-primary btn-lg text-white mb-3 w-100" id="vk" href="https://vk.com/id157921634">VK</a></li>
             <li><a class="btn btn-outline-primary btn-lg text-white mb-3 w-100" id="github" href="https://github.com/Lamr001">GitHub</a></li>
@@ -150,8 +175,15 @@
         </div>
       </div>
     </section>
-    <footer class="container-fluid bg-dark d-table">
-      <div class="container d-table-cell align-middle text-center text-white"><span id="footerIntro">LAMR</span></div>
+    <footer class="container-fluid bg-dark d-table wow fadeIn">
+      <div class="container d-flex flex-column text-white pt-3">
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item"><a class="nav-link text-white ml-1 pr-4 pl-4" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link text-white ml-1 pr-4 pl-4" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white ml-1 pr-4 pl-4" href="#contact">Contact</a></li>
+        </ul>
+        <div class="align-self-center" id="footerIntro">LAMR</div>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
