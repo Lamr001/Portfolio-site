@@ -13,6 +13,9 @@ html(lang="en")
       new WOW().init();
 
   body(data-spy="scroll" data-target="#navbar-scroll")
+
+    #preloader.preloader
+      .loader L
     header
 
       nav#navbar-scroll.navbar.navbar-dark.navbar-expand-md.fixed-top.text-white
@@ -150,7 +153,11 @@ html(lang="en")
             h5.card-title Git with Github
             p.card-text.
               Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-            a.btn.btn-dark.w-100(href='https://git-scm.com/') Developers site
+            button.btn.btn-dark.dropdown-toggle.w-100(type="button", id="forDropdown", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Developers site
+
+            .dropdown-menu(aria-labelledby="forDropdown")
+              a.dropdown-item(href="https://git-scm.com/") Git
+              a.dropdown-item(href="https://github.com/") GitHub
 
         .card.col-md-5.col-10.p-0.mt-5
           img.card-img-top(src='./img/jquery.png', alt='jQuery')
@@ -192,17 +199,18 @@ html(lang="en")
             li
               button#mail.btn.btn-outline-primary.btn-lg.text-white.mb-3.w-100(href='', data-toggle='tooltip', data-placement='bottom', title='denkamanet@mail.ru') Mail
 
-    footer.container-fluid.bg-dark.d-table.wow.fadeIn
-      .container.d-flex.flex-column.text-white.pt-3
-        ul.nav.nav-pills.nav-fill
-              li.nav-item
-                a.nav-link.text-white.ml-1.pr-4.pl-4(href='#portfolio') Portfolio
-              li.nav-item
-                a.nav-link.text-white.ml-1.pr-4.pl-4(href='#about') About
-              li.nav-item
-                a.nav-link.text-white.ml-1.pr-4.pl-4(href='#contact') Contact
+    footer.container-fluid.bg-dark.wow.fadeIn
+      .row.d-flex.text-white.pt-1
+        ul.nav.nav-pills.col-md-6.col-12.flex-column.flex-md-row.text-center.m-0.p-0
+          li.nav-item
+            a.nav-link.text-white(href='#portfolio') Portfolio
+          li.nav-item
+            a.nav-link.text-white(href='#about') About
+          li.nav-item
+            a.nav-link.text-white(href='#contact') Contact
 
-        #footerIntro.align-self-center LAMR
+        #footerIntro.col-md-1.col-12.ml-auto.mt-md-0.mt-2.pr-md-2
+          div LAMR
 
 
 

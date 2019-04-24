@@ -4,7 +4,37 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit')
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker')
 
-$logoText: 'Permanent Marker', cursive
+$logoFont: 'Permanent Marker', cursive
+
+
+
+.preloader
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+  background-color: #343a40
+  z-index: 2000
+  transition: 1s all
+  opacity: 1
+  visibility: visible
+  
+  .loader
+    width: 150px
+    height: 150px
+    position: absolute
+    text-align: center
+    color: white
+    font-family: $logoFont
+    font-size: 6rem
+    animation: 1s puls infinite linear
+
+.ready
+  opacity: 0
+  visibility: hidden
+
 
 html, body
   width: 100%
@@ -13,14 +43,15 @@ html, body
   scroll-behavior: smooth
 
 h1, h2, h3, h4, h5,
-.navbar li > a
+.navbar li > a,
+footer ul
   font-family: 'Righteous', cursive !important
 
 
 .navbar .navbar-brand,
 .intro-logo,
 #footerIntro
-  font-family: $logoText
+  font-family: $logoFont
 
 
 header
@@ -102,10 +133,12 @@ li > a
   min-width: 280px
 
 footer
-  min-height: 25%
+  min-height: 10%
 
-/*#footerIntro
-  font-size: 9vw*/
+#footerIntro
+  display: flex
+  justify-content: center
+  align-items: center
 
 @media (min-width: 790px)
 
@@ -116,3 +149,14 @@ footer
 @media (max-width: 790px)
   #technology
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-2.jpg") no-repeat fixed (center / cover)
+
+
+@keyframes puls
+  from
+    color: white
+
+  50%
+    color: #a6a6a6
+
+  to
+    color: white

@@ -15,6 +15,9 @@
     </script>
   </head>
   <body data-spy="scroll" data-target="#navbar-scroll">
+    <div class="preloader" id="preloader">
+      <div class="loader">L</div>
+    </div>
     <header>
       <nav class="navbar navbar-dark navbar-expand-md fixed-top text-white" id="navbar-scroll">
         <div class="container"><a class="navbar-brand text-white m-2 m-md-0" href="#">Lamr</a>
@@ -129,7 +132,9 @@
         <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/git(hub).jpg" alt="git and github">
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">Git with Github</h5>
-            <p class="card-text">Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p><a class="btn btn-dark w-100" href="https://git-scm.com/">Developers site</a>
+            <p class="card-text">Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
+            <button class="btn btn-dark dropdown-toggle w-100" type="button" id="forDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Developers site</button>
+            <div class="dropdown-menu" aria-labelledby="forDropdown"><a class="dropdown-item" href="https://git-scm.com/">Git</a><a class="dropdown-item" href="https://github.com/">GitHub</a></div>
           </div>
         </div>
         <div class="card col-md-5 col-10 p-0 mt-5"><img class="card-img-top" src="./img/jquery.png" alt="jQuery">
@@ -175,14 +180,16 @@
         </div>
       </div>
     </section>
-    <footer class="container-fluid bg-dark d-table wow fadeIn">
-      <div class="container d-flex flex-column text-white pt-3">
-        <ul class="nav nav-pills nav-fill">
-          <li class="nav-item"><a class="nav-link text-white ml-1 pr-4 pl-4" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link text-white ml-1 pr-4 pl-4" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link text-white ml-1 pr-4 pl-4" href="#contact">Contact</a></li>
+    <footer class="container-fluid bg-dark wow fadeIn">
+      <div class="row d-flex text-white pt-1">
+        <ul class="nav nav-pills col-md-6 col-12 flex-column flex-md-row text-center m-0 p-0">
+          <li class="nav-item"><a class="nav-link text-white" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
         </ul>
-        <div class="align-self-center" id="footerIntro">LAMR</div>
+        <div class="col-md-1 col-12 ml-auto mt-md-0 mt-2 pr-md-2" id="footerIntro">
+          <div>LAMR</div>
+        </div>
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

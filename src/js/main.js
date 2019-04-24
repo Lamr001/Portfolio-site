@@ -1,13 +1,26 @@
 
+$(document).ready(function() {
+    setTimeout(function() {
+        if(!$("#preloader").hasClass("ready")) {
+            $("#preloader").addClass("ready");
+        }
+    }, 1000);
+
+    checkScrollNavbar();
+});
+
+
+
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
 
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     checkScrollNavbar();
-});
+});*/
 $(window).scroll(function() {
     checkScrollNavbar();
 });
