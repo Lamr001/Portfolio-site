@@ -29,7 +29,7 @@ function distHtml() {
             sortClassName: true
             };
 
-    return src("src/*.html")
+    return src(["!src/_*.html", "src/*.html"])
         .pipe(htmlmin(settings))
         .pipe(rename("index-min.html"))
         .pipe(dest("./dist/"))
@@ -39,7 +39,7 @@ function distHtml() {
 
 function compileCss() {
 
-    return src("src/style/sass/*.sass")
+    return src(["!src/style/sass/_*.sass", "src/style/sass/*.sass"])
         .pipe(sass())
         .pipe(postcss([ autoprefixer() ]))
         .pipe(dest("src/style"))

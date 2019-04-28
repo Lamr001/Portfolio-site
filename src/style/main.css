@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous");
-@import url("https://fonts.googleapis.com/css?family=Faster+One");
-@import url("https://fonts.googleapis.com/css?family=Kanit");
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
 .preloader {
   position: fixed;
@@ -22,8 +20,14 @@
     color: white;
     font-family: "Permanent Marker", cursive;
     font-size: 6rem;
-    -webkit-animation: 1s puls infinite linear;
-            animation: 1s puls infinite linear; }
+    -webkit-animation-name: puls;
+            animation-name: puls;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
 
 .ready {
   opacity: 0;
@@ -129,14 +133,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-@media (min-width: 790px) {
-  .avatar {
-    max-width: 25%; } }
-
-@media (max-width: 790px) {
-  #technology {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-2.jpg") no-repeat fixed center/cover; } }
 
 @-webkit-keyframes puls {
   from {
